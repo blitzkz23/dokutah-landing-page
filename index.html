@@ -16,17 +16,19 @@
         <!-- Navbar -->
         <nav class="nav-bar"> 
             <div class="container">
-                <a href="/index.html"><h1 class="nav-brand"><i class="fas fa-stethoscope"></i> Dokutah</h1></a>
+                <a href="/index.html"><h1 trabslate="no" class="nav-brand"><i class="fas fa-stethoscope"></i> Dokutah</h1></a>
                 <ul class="menu">
                     <li><a href="#about">Tentang</a></li>
                     <li><a href="#services">Layanan</a></li>
-                    <li><a href="#">Cari Dokter</a></li>
-                    <li><a href="#">Testimoni</a></li>
-                    <li><a href="#services">Perjanjian</a></li>
+                    <li><a href="#application">Aplikasi</a></li>
+                    <li><a href="#testimonial">Testimoni</a></li>
+                    <li><a href="#appointment">Perjanjian</a></li>
                 </ul>
                 <ul class="acc-menu">
                     <li><a href="#">Login</a></li>
-                    <li><a href="#" class="btn-register" id="signUp">Register</a></li>
+                    <div class="btn-wrapper-red">
+                        <li><a href="#" class="btn-register" id="signUp">Register</a></li>
+                    </div>
                 </ul>
             </div>
         </nav>
@@ -48,16 +50,18 @@
 
     <!-- Section About -->
     <section class="about container" id="about">
-        
         <div class="img-box-left">
             <img src="./asset/about.svg" alt="doctor" class="about-img">
         </div>
         <div class="text-box">
             <h2>Tentang kami</h2>
+            <div class="content-line-left"></div>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit modi quidem est magni fuga consequatur delectus sint! Reiciendis atque deserunt tenetur iusto rem facilis dolorem
             Reprehenderit modi quidem est magni    
             </p>
-            <a href="#" class="btn-generic">Pelajari Selengkapnya <i class="fas fa-arrow-right"></i></a>
+            <div class="btn-wrapper">
+                <a href="#" class="btn-generic">Pelajari Selengkapnya</a>
+            </div>
             <div class="dot-decorations1">
                 <img src="./asset/dot-decoration.svg" alt="decoration" class="dot-decoration-img">
             </div>
@@ -68,7 +72,7 @@
     <section class="services" id="services">
         <div class="container">
             <div class="headings">
-                <h2>Layanan Kami</h2>
+                <h2>Pelayanan Kami</h2>
                 <div class="content-line-center"></div>
             </div>
             <div class="services-cards">
@@ -105,6 +109,23 @@
             </div>
         </div>
     </section>
+
+    <!-- Section Aplikasi -->
+    <section class="application container" id="application">
+            <div class="text-box">
+                <h2>Download aplikasi kami, untuk pelayanan lebih cepat, dimana saja !</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit modi quidem est magni fuga consequatur delectus sint! Reiciendis atque deserunt tenetur iusto rem facilis dolorem</p>
+                <div class="btn-wrapper">
+                    <a href="#" class="btn-apple"><i class="fab fa-apple"> Download</i></a>
+                    <a href="#" class="btn-generic"><i class="fab fa-google-play"> Download</i></a>
+                </div>
+            </div>
+            <div class="img-box-right">
+                <img src="./asset/dokutahphone.svg" alt="phonemockuop" class="dokutahphone">
+            </div>
+    </section>
+
+    
 
     <script src="script.js"></script>
 </body>

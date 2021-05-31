@@ -42,7 +42,7 @@ body {
 }
 
 .nav-bar a {
-  color: #373f41;
+  color: hsl(192, 8%, 24%);
   text-decoration: none;
   padding: 8px 15px;
   transition: all 0.3s ease-in-out;
@@ -51,7 +51,7 @@ body {
 }
 
 .nav-bar a:hover {
-  color: #ff6e7f;
+  color: hsl(353, 100%, 72%);
 }
 
 .nav-bar h1 {
@@ -70,7 +70,7 @@ body {
 
 #signUp li:hover {
   background-color: #fff;
-  color: #373f41;
+  color: hsl(192, 8%, 24%);
 }
 
 .menu {
@@ -78,9 +78,12 @@ body {
 }
 
 /* Header */
-header,
-.services {
-  background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+header {
+  background: linear-gradient(
+    to right,
+    hsl(353, 100%, 72%),
+    hsl(201, 100%, 87%)
+  );
   /* background-color: #fafafa; */
 }
 
@@ -94,7 +97,7 @@ header,
 
 .text-box {
   position: relative;
-  max-width: 600px;
+  width: clamp(300px, 60%, 600px);
   z-index: 2;
 }
 
@@ -112,7 +115,7 @@ h2 {
 }
 
 .text-box p {
-  color: #7d7987;
+  color: hsl(257, 6%, 50%);
   font-weight: 400;
 }
 
@@ -154,7 +157,7 @@ h2 {
 
 .text-box a:hover {
   background-color: #fff;
-  color: #ff6e7f;
+  color: hsl(353, 100%, 72%);
 }
 
 /* About */
@@ -172,20 +175,50 @@ h2 {
   height: 31.25em;
 }
 
-.about a {
-  border: 1px solid #000;
+.btn-generic {
+  border: 3px solid hsl(213, 100%, 58%);
   border-radius: 8px;
   padding: 0.5em;
   display: inline-block;
   text-decoration: none;
+  font-size: 1.4rem;
   margin: 1.2em 0;
-  color: #000;
+  color: hsl(213, 100%, 58%);
+  margin: 5% 5% 5% 0;
+}
+
+.btn-apple {
+  border: 3px solid hsl(213, 100%, 58%);
+  background-color: hsl(213, 100%, 58%);
+  border-radius: 8px;
+  padding: 0.5em;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin: 1.2em 0;
+  color: #fff;
+  margin: 5% 5% 5% 0;
+}
+
+.btn-wrapper-red a:hover {
+  background-color: #fff;
+  color: hsl(351, 100%, 65%);
+}
+.btn-wrapper a:hover {
+  background-color: hsl(213, 100%, 58%);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-apple:hover {
+  opacity: 0.8;
 }
 
 /* Services */
 .services {
   padding: 3em 0;
   text-align: center;
+  background-color: #efeff3;
 }
 
 .services-cards {
@@ -209,6 +242,7 @@ h2 {
     0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
     0 100px 80px rgba(0, 0, 0, 0.07);
   background-color: #fff;
+  /* content-visibility: hidden; */
 }
 
 .card h3 {
@@ -219,28 +253,55 @@ h2 {
 .card p {
   font-size: 1.3rem;
   padding-top: 0.3rem;
+  color: hsl(257, 6%, 50%);
 }
 
 .card i {
-  color: #ef8172;
+  color: hsl(7, 80%, 69%);
 }
 
 .card i:hover {
-  color: #ff4c68;
+  color: hsl(351, 100%, 65%);
 }
 
 .content-line-center {
-  border-top: 4px solid white;
+  border-top: 4px solid #000;
   padding-bottom: 32px;
   margin: 0 auto;
-  width: 10%;
+  width: 50px;
+}
+
+.content-line-left {
+  border-top: 4px solid #000;
+  padding-bottom: 32px;
+  width: 50px;
+}
+
+/* Section Aplikasi */
+.application {
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6em 0;
+}
+
+.dokutahphone {
+  width: 60em;
+  transform: rotate(25deg);
+}
+
+.download-button {
+  font-size: 1.2rem;
+  padding: 1rem;
 }
 
 /* Decoration */
 .decoration-left {
   position: absolute;
-  left: -120px;
-  top: -10px;
+  left: -7.5em;
+  top: 5em;
   z-index: -1;
   transform: translateY(-200px);
   overflow: hidden;
