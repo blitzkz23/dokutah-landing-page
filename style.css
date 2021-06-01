@@ -134,6 +134,7 @@ h2 {
 }
 
 .img-box-left {
+  position: relative;
   width: 600px;
   display: flex;
   justify-content: flex-start;
@@ -142,6 +143,7 @@ h2 {
 }
 
 .img-box-right {
+  position: relative;
   width: 600px;
   display: flex;
   justify-content: flex-end;
@@ -167,7 +169,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3em 0;
+  padding-top: 3em;
+  padding-bottom: 6em;
 }
 
 .about-img {
@@ -218,7 +221,7 @@ h2 {
 .services {
   padding: 3em 0;
   text-align: center;
-  background-color: #efeff3;
+  background-color: #f4f4f4;
 }
 
 .services-cards {
@@ -297,6 +300,89 @@ h2 {
   padding: 1rem;
 }
 
+/* Section Testimoni */
+.testimoni {
+  background-color: #f4f4f4;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.testimoni h2 {
+  text-align: center;
+}
+
+.testimonial-container {
+  background-color: hsl(213, 100%, 58%);
+  color: #fff;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 35px 80px;
+  max-width: 960px;
+  position: relative;
+}
+
+.fa-quote {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 28px;
+  position: absolute;
+  top: 70px;
+}
+
+.fa-quote-right {
+  left: 40px;
+}
+
+.fa-quote-left {
+  right: 40px;
+}
+
+.testimonial {
+  line-height: 28px;
+  font-size: 1.4em;
+  text-align: justify;
+}
+
+.user {
+  margin-top: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user .user-image {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  object-fit: cover;
+}
+
+.user .user-details {
+  margin-left: 10px;
+}
+
+.user .username {
+  margin: 0;
+}
+
+.user .role {
+  font-weight: normal;
+  margin: 6px 0;
+}
+
+.progress-bar {
+  background-color: #fff;
+  height: 4px;
+  width: 100%;
+  animation: grow 10s linear infinite;
+  transform-origin: left;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+}
+
 /* Decoration */
 .decoration-left {
   position: absolute;
@@ -321,9 +407,18 @@ h2 {
   box-sizing: content-box;
 }
 
+.gradient-decor {
+  position: absolute;
+  width: 580px;
+  height: 560px;
+  transform: translateX(-33em);
+  z-index: -1;
+}
+
 /* Responsiveness */
 @media (max-width: 960px) {
-  .header-content {
+  .header-content,
+  .application {
     flex-direction: column;
     margin-top: 4em;
   }
