@@ -1,3 +1,16 @@
+// Script NavBar
+const nav = document.querySelector('.nav-bar');
+window.addEventListener('scroll', fixNav)
+
+function fixNav() {
+   if(window.scrollY > nav.offsetHeight + 50) {
+       nav.classList.add('active');
+   }else {
+       nav.classList.remove('active');
+   }
+}
+
+// Script Testimonial
 const testimonialsContainer = document.querySelector('.testimonials-container');
 const testimonial = document.querySelector('.testimonial');
 const userImage = document.querySelector('.user-image');

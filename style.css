@@ -21,16 +21,38 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  transition: all 0.3s ease-in-out;
   z-index: 1;
-  padding: 3.6vh 0;
+  position: fixed;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-bar.active {
+  background-color: hsl(353, 100%, 72%);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 100px 80px rgba(0, 0, 0, 0.07);
+  border-radius: 0 0 25% 25%;
+}
+
+.nav-bar.active a {
+  color: var(--primary-color);
+}
+
+.nav-bar.active a:hover {
+  color: #fff;
+}
+
+.nav-bar.active .container {
+  padding: 20px 0;
 }
 
 .nav-bar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 40px 0;
   transition: all 0.3s ease-in-out;
 }
 
@@ -46,7 +68,7 @@ body {
   text-decoration: none;
   padding: 8px 15px;
   transition: all 0.3s ease-in-out;
-  font-weight: 500;
+  font-weight: 300;
   padding-left: 0;
 }
 
@@ -84,6 +106,7 @@ header {
     hsl(353, 100%, 72%),
     hsl(201, 100%, 87%)
   );
+  width: 100vw;
   /* background-color: #fafafa; */
 }
 
@@ -92,7 +115,7 @@ header {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 3.2em 0 0 0;
+  padding: 14em 0 0 0;
 }
 
 .text-box {
@@ -236,7 +259,6 @@ h2 {
 .card {
   flex: 0 32%;
   margin-bottom: 3%;
-  max-width: 32%;
   padding: 4.5%;
   border: 1px solid #fff;
   border-radius: 10px;
@@ -292,7 +314,7 @@ h2 {
 
 .dokutahphone {
   width: 60em;
-  transform: rotate(25deg);
+  transform: rotate(-12deg);
 }
 
 .download-button {
@@ -383,6 +405,106 @@ h2 {
   }
 }
 
+/* Section Appointment */
+.appointment {
+  padding: 5em 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.appoint-left {
+  float: left;
+  transform: translateY(200%);
+  width: 500px;
+}
+
+.form-box-right {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 25px;
+  width: 600px;
+  float: right;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: hsl(213, 100%, 58%);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: hsl(213, 100%, 60%);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(
+    to right,
+    hsl(353, 100%, 72%),
+    hsl(201, 100%, 87%)
+  );
+  padding: 1.5em 0;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.footer-left a {
+  color: #fff;
+}
+
+.footer-right a {
+  color: hsl(213, 100%, 58%);
+}
+
+.footer-right i:hover {
+  cursor: pointer;
+}
+
+.footer-right .blue:hover {
+  color: hsl(213, 100%, 58%);
+}
+
+.footer-right .red:hover {
+  color: hsl(351, 100%, 65%);
+}
+
+.footer-right i {
+  padding: 5px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #000;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-wrapper {
+  padding-top: 3em;
+}
+
 /* Decoration */
 .decoration-left {
   position: absolute;
@@ -427,6 +549,10 @@ h2 {
     margin-top: 0;
     flex-direction: column;
   }
+
+  .form-box-right {
+    float: none;
+  }
 }
 
 @media (max-width: 763px) {
@@ -438,5 +564,9 @@ h2 {
 @media (max-width: 600px) {
   .menu {
     display: none !important;
+  }
+
+  .decoration-left {
+    display: none;
   }
 }
