@@ -17,11 +17,11 @@
             <div class="container">
                 <a href="/index.html"><h1 trabslate="no" class="nav-brand"><i class="fas fa-stethoscope"></i> Dokutah</h1></a>
                 <ul class="menu">
-                    <li><a href="#about">Tentang</a></li>
-                    <li><a href="#services">Layanan</a></li>
-                    <li><a href="#application">Aplikasi</a></li>
-                    <li><a href="#testimonial">Testimoni</a></li>
-                    <li><a href="#appointment">Perjanjian</a></li>
+                    <li class="about-nav active"><a href="#about-nav">Tentang</a></li>
+                    <li class="services-nav"><a href="#services-nav">Layanan</a></li>
+                    <li class="application-nav"><a href="#application-nav">Aplikasi</a></li>
+                    <li class="testimonials-nav"><a href="#testimonials-nav">Testimoni</a></li>
+                    <li class="appointments-nav"><a href="#appointments-nav">Perjanjian</a></li>
                 </ul>
                 <ul class="acc-menu">
                     <li><a href="#">Login</a></li>
@@ -32,7 +32,7 @@
             </div>
         </nav>
         <!-- Header Content -->
-        <section class="header-content container" id="header">
+        <section class="header-content container" id="header-nav">
             <div class="text-box">
                 <h2>Solusi siaga sehat bersama <span>Dokutah.</span></h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit modi quidem est magni fuga consequatur delectus sint! Reiciendis atque deserunt tenetur iusto rem facilis dolorem</p>
@@ -48,7 +48,7 @@
     </header>
 
     <!-- Section About -->
-    <section class="about container" id="about">
+    <section class="about container" id="about-nav">
         <div class="img-box-left">
             <img src="./asset/about.svg" alt="doctor" class="about-img">
         </div>
@@ -68,7 +68,7 @@
     </section>
 
     <!-- Section Layanan -->
-    <section class="services" id="services">
+    <section class="services" id="services-nav">
         <div class="container">
             <div class="headings">
                 <h2>Pelayanan kami</h2>
@@ -110,16 +110,17 @@
     </section>
 
     <!-- Section Aplikasi -->
-    <section class="application container" id="application">
+    <section class="application container" id="application-nav">
             <div class="text-box">
                 <h2>Download aplikasi kami, untuk pelayanan lebih cepat, dimana saja !</h2>
+                <div class="content-line-left"></div>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit modi quidem est magni fuga consequatur delectus sint! Reiciendis atque deserunt tenetur iusto rem facilis dolorem</p>
                 <div class="btn-wrapper">
                     <a href="#" class="btn-apple"><i class="fab fa-apple"> Download</i></a>
                     <a href="#" class="btn-generic"><i class="fab fa-google-play"> Download</i></a>
                 </div>
             </div>
-            <div class="img-box-right">
+            <div class="img-box-right dokutah">
                 <img src="./asset/dokutahphone.svg" alt="phonemockup" class="dokutahphone">
                 <div class="decoration-circles">
                     <img src="./asset/gradientcircles.svg" alt="decoration" class="gradient-decor">
@@ -128,7 +129,7 @@
     </section>
 
     <!-- Section Testimoni -->
-    <section class="testimoni" id="testimonial">
+    <section class="testimoni" id="testimonials-nav">
         <div class="container">
             <div class="headings">
                 <h2>Apa kata mereka ?</h2>
@@ -153,33 +154,42 @@
     </section>
 
     <!-- Section Perjanjian -->
-    <section class="appointment" id="appointment">
+    <section class="appointment" id="appointments-nav">
         <div class="container">
-            <div class="text-box appoint-left">
+            <div class="headings">
                 <h2>Buat perjanjian</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit modi quidem est magni.</p>
+                <div class="content-line-center"></div>
             </div>
-            <div class="form-box-right">
-                <form action="/action_page.php">
-                    <label for="name">Nama</label>
-                    <input type="text" id="name" name="firstname" placeholder="Nama Kamu...">
-                
-                    <label for="phone">No. Hp</label>
-                    <input type="text" id="phone" name="lastname" placeholder="No. Hp Kamu...">
-
-                    <label for="email">E-mail</label>
-                    <input type="text" id="email" name="firstname" placeholder="E-mail Kamu...">
-
-                    <label for="subject">Subjek</label>
-                    <input type="text" id="subject" name="firstname" placeholder="Subjek Keluhanmu...">
-
-                    <label for="problem">Keluhan</label><br>
-                    <textarea id="subject" name="problem" placeholder="Deskripsikan keluhan anda..." style="height:200px;width: 100%;"></textarea>
-                             
-                    <input type="submit" value="Submit">
-                  </form>
-            </div>
+            <form class="contact" action="" method="post">
+                <h3>Kontak Cepat</h3>
+                <h4>Buat perjanjian dengan rumah sakit terdekat, untuk penanganan cepat !</h4>
+                <fieldset>
+                  <input placeholder="Nama Anda.." type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                  <input placeholder="Email Anda.." type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                  <input placeholder="No. HP Anda.." type="tel" tabindex="3" required>
+                </fieldset>
+                <fieldset>
+                  <input placeholder="Subyek keluhan Anda.." type="url" tabindex="4" required>
+                </fieldset>
+                <fieldset>
+                  <textarea placeholder="Deskripsikan keluhan Anda.." tabindex="5" required></textarea>
+                </fieldset>
+                <fieldset>
+                  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </fieldset>
+              </form>
+              <div class="dot-decorations2">
+                <img src="./asset/dot-decoration.svg" alt="decoration" class="dot-decoration-img">
+              </div>
+              <!-- <div class="dot-decorations3">
+                <img src="./asset/dot-decoration.svg" alt="decoration" class="dot-decoration-img">
+              </div> -->
         </div>
+        
     </section>
     
     <footer>
@@ -192,7 +202,7 @@
                 
             </div>
             <div class="footer-right">
-                <h5>Ikuti juga kami pada:</h5>
+                <h4>Ikuti juga kami, pada:</h4>
                 <div class="socmed-container">
                     <i class="fab fa-facebook blue"></i>
                     <i class="fab fa-instagram red"></i>
@@ -201,7 +211,7 @@
                     <i class="fab fa-youtube red"></i>
                 </div>
                 <div class="text-wrapper">
-                    <a href="#" target="_blank">powered by me</a>
+                    <a href="http://gamelab.id" target="_blank">powered by gamelab</a>
                 </div>
                 
             </div>

@@ -10,6 +10,31 @@ function fixNav() {
    }
 }
 
+const sections = document.querySelectorAll('section');
+const navli = document.querySelectorAll('nav .container ul li');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+
+  // console.log(pageYOffset)
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if(pageYOffset >= (sectionTop - sectionHeight / 3)) {
+      current = section.getAttribute('id');
+    }
+  })
+  console.log(current);
+  
+  navli.forEach(li => {
+    li.classList.remove('active');
+    if(li.classList.contains(current)) {
+      li.classList.add('active');
+    }
+  });
+  console.log(navli);
+});
+
 // Script Testimonial
 const testimonialsContainer = document.querySelector('.testimonials-container');
 const testimonial = document.querySelector('.testimonial');
@@ -89,3 +114,4 @@ function updateTestimonial() {
 }
 
 setInterval(updateTestimonial, 10000);
+
